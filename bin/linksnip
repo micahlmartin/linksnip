@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+var url = process.argv[2];
+
+linksnip = require('../')
+
+linksnip(url);

@@ -1,0 +1,29 @@
+    {
+    "name": "linksnip",
+    "version": "0.0.1",
+    "author": "Micah Martin",
+    "description": "Provides a synopsis for a url",
+    "bin": {
+        "linksnip": "./bin/linksnip"
+    },
+    "main": "./index",
+    "engines": {
+        "node": ">=0.10.x",
+        "npm": ">=1.3.x"
+    },
+    "dependencies": {
+        "cheerio": "~=0.12",
+        "optimist": "~=0.6",
+        "request": "~=2.25",
+        "underscore": "~=1.5"
+    },
+    "devDependencies": {
+        "mocha": "~=1.12",
+        "should": "~=1.2"
+    },
+    "bundleDependencies": [],
+    "repository" : {
+        "type" : "git",
+        "url" : "https://github.com/micahlmartin/linksnip.git"
+    }
+}
