@@ -9,7 +9,7 @@ module.exports = function(url, callback) {
 
     var parse_title = function($) {
         var title = null;
-        title = $('head').find('title').text();
+        title = $('head').find('title').text().split('|')[0].trim();
         return title;
     };
 
