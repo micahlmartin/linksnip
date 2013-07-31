@@ -45,7 +45,6 @@ describe('linksnip', function(){
 describe('linksnip', function(){
     it('msnbc article test', function(done){
         results = linksnip("http://www.nbcnews.com/technology/space-all-small-cheap-satellites-may-one-day-do-your-6C10488674", function(results) {
-            console.log(results);
             assert.equal(results.url, "http://www.nbcnews.com/technology/space-all-small-cheap-satellites-may-one-day-do-your-6C10488674");
             assert.equal(results.title, "Space for all: Small, cheap satellites may one day do your bidding - NBC News.com");
             // assert.equal(results.description, "Facebook is a social utility that connects people with friends and others who work, study and live around them. People use Facebook to keep up with friends, upload an unlimited number of photos, post links and videos, and learn more about the people they meet.")

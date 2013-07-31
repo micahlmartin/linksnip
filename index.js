@@ -1,2 +1,2 @@
 
-module.exports = require('./linksnip')
+module.exports = require('./lib/linksnip')
