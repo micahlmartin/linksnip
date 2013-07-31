@@ -2,6 +2,7 @@ var assert = require("assert")
 var linksnip = require('../')
 
 describe('linksnip', function(){
+    this.timeout(1000000)
     it('Google.com test', function(done){
         results = linksnip("http://www.google.com", function(results) {
             assert.equal(results.url, "http://www.google.com/");
@@ -13,10 +14,7 @@ describe('linksnip', function(){
             done();
         });
     })
-})
 
-
-describe('linksnip', function(){
     it('facebook.com test', function(done){
         results = linksnip("http://facebook.com", function(results) {
             assert.equal(results.url, "https://www.facebook.com/");
@@ -27,9 +25,7 @@ describe('linksnip', function(){
             done();
         });
     })
-})
 
-describe('linksnip', function(){
     it('huffingtonpost.com article test', function(done){
         results = linksnip("http://www.huffingtonpost.com/jared-bernstein/bailing-out-detroit_b_3670435.html?utm_hp_ref=business", function(results) {
             assert.equal(results.url, "http://www.huffingtonpost.com/jared-bernstein/bailing-out-detroit_b_3670435.html?utm_hp_ref=business");
@@ -40,9 +36,7 @@ describe('linksnip', function(){
             done();
         });
     })
-})
 
-describe('linksnip', function(){
     it('msnbc article test', function(done){
         results = linksnip("http://www.nbcnews.com/technology/space-all-small-cheap-satellites-may-one-day-do-your-6C10488674", function(results) {
             assert.equal(results.url, "http://www.nbcnews.com/technology/space-all-small-cheap-satellites-may-one-day-do-your-6C10488674");
