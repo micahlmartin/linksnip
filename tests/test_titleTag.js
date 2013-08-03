@@ -9,10 +9,8 @@ describe('titleTag', function() {
         html = "<html><head></head><body></body></html>"
 
         $ = cheerio.load(html)
-        titleTag($, function(title) {
-            assert.equal(null, title);
-        })
-
+        title = titleTag($)
+        assert.equal(null, title);
         done()
     })
 
@@ -20,10 +18,8 @@ describe('titleTag', function() {
         html = '<html><head><title>this is my title</title></head><body></body></html>'
 
         $ = cheerio.load(html)
-        titleTag($, function(title) {
-            assert.equal("this is my title", title);
-        })
-
+        title = titleTag($)
+        assert.equal("this is my title", title);
         done()
     })
 });

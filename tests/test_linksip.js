@@ -1,23 +1,27 @@
-// var assert = require("assert")
-// var linksnip = require('../')
+var assert = require("assert")
+var linksnip = require('../lib/linksnip')
 
-// describe('linksnip', function(){
-//     this.timeout(1000000)
-//     // it('Google.com test', function(done){
-//     //     results = linksnip("http://www.google.com", function(results) {
-//     //         assert.equal(results.url, "http://www.google.com/");
-//     //         assert.equal(results.title, "Google");
-//     //         assert.equal(results.description, "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.")
-//     //         assert.equal(results.images.length, 2)
-//     //         assert.equal(results.images[0].url, 'http://www.google.com/images/google_favicon_128.png');
-//     //         assert.equal(results.images[0].height, 128);
-//     //         assert.equal(results.images[0].width, 128);
-//     //         assert.equal(results.images[1].url, 'http://www.google.com/images/srpr/logo4w.png');
-//     //         assert.equal(results.images[1].height, 190);
-//     //         assert.equal(results.images[1].width, 550);
-//     //         done();
-//     //     });
-//     // })
+describe('linksnip', function(){
+    this.timeout(1000000)
+    it('Google.com test', function(done){
+        ls = new linksnip("http://google.com", function(results){
+            console.log(results)
+            done()
+        })
+        // results = linksnip("http://www.google.com", function(results) {
+        //     // assert.equal(results.url, "http://www.google.com/");
+        //     assert.equal(results.title, "Google");
+        //     // assert.equal(results.description, "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.")
+        //     // assert.equal(results.images.length, 2)
+        //     // assert.equal(results.images[0].url, 'http://www.google.com/images/google_favicon_128.png');
+        //     // assert.equal(results.images[0].height, 128);
+        //     // assert.equal(results.images[0].width, 128);
+        //     // assert.equal(results.images[1].url, 'http://www.google.com/images/srpr/logo4w.png');
+        //     // assert.equal(results.images[1].height, 190);
+        //     // assert.equal(results.images[1].width, 550);
+        //     done();
+        // });
+    })
 
 //     // it('facebook.com test', function(done){
 //     //     results = linksnip("http://facebook.com", function(results) {
@@ -55,4 +59,4 @@
 //     //         done();
 //     //     });
 //     // })
-// })
+})

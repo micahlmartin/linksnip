@@ -8,20 +8,16 @@ describe('metaDescription', function() {
     it('When meta description tag does not exist then returns null', function(done){
         html = "<html><head></head><body></body></html>"
         $ = cheerio.load(html)
-        metaDescription($, function(description) {
-            assert.equal(null, description);
-        })
-
+        description = metaDescription($)
+        assert.equal(null, description);
         done()
     })
 
     it('When meta description tag exists then returns', function(done){
         html = '<html><head><meta name="description" content="this is my description" /></head><body></body></html>'
         $ = cheerio.load(html)
-        metaDescription($, function(description) {
-            assert.equal("this is my description", description);
-        })
-
+        description = metaDescription($)
+        assert.equal("this is my description", description);
         done()
     })
 });
