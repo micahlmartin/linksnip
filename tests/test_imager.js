@@ -1,19 +1,54 @@
+assert = require('assert')
 imager = require('../lib/imager')
 
 
-// describe('imager', function(){
+describe('imager', function(){
 
-//     this.timeout(10000);
+    this.timeout(10000);
 
-//     it('png test', function(done){
-//         results = imager("https://www.google.com/images/srpr/logo4w.png", function(results) {
-//             // assert.equal(results.url, "http://www.google.com/");
-//             // assert.equal(results.title, "Google");
-//             // assert.equal(results.description, "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.")
-//             // assert.equal(results.images.length, 2)
-//             // assert.equal(results.images[0], '/images/google_favicon_128.png');
-//             // assert.equal(results.images[1], '/images/srpr/logo4w.png');
-//             done();
-//         });
-//     })
-// })
+    it('Test full url', function(done){
+        results = imager('https://www.google.com/images/srpr/logo4w.png', 'https://www.google.com', function(results) {
+            assert.equal(1, results.length)
+            assert.equal(results[0].url, 'https://www.google.com/images/srpr/logo4w.png')
+            assert.equal(results[0].height, 190)
+            assert.equal(results[0].width, 550)
+            assert.equal(results[0].format, 'PNG')
+            done();
+        });
+    })
+
+    it('Test relative url', function(done){
+        results = imager('/images/srpr/logo4w.png', 'https://www.google.com', function(results) {
+            assert.equal(1, results.length)
+            assert.equal(results[0].url, 'https://www.google.com/images/srpr/logo4w.png')
+            assert.equal(results[0].height, 190)
+            assert.equal(results[0].width, 550)
+            assert.equal(results[0].format, 'PNG')
+            done();
+        });
+    })
+
+    it('Test relative url of current directory', function(done){
+        results = imager('logo4w.png', 'https://www.google.com/images/srpr/whatever.html', function(results) {
+            assert.equal(1, results.length)
+            assert.equal(results[0].url, 'https://www.google.com/images/srpr/logo4w.png')
+            assert.equal(results[0].height, 190)
+            assert.equal(results[0].width, 550)
+            assert.equal(results[0].format, 'PNG')
+            done();
+        });
+    })
+
+    // it('Test relative url of current directory', function(done){
+    //     results = imager('logo4w.png', 'https://www.google.com/images/srpr/whatever.html', function(results) {
+    //         assert.equal(1, results.length)
+    //         assert.equal(results[0].url, 'https://www.google.com/images/srpr/logo4w.png')
+    //         assert.equal(results[0].height, 190)
+    //         assert.equal(results[0].width, 550)
+    //         assert.equal(results[0].format, 'PNG')
+    //         done();
+    //     });
+    // })
+
+
+})
