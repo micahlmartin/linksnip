@@ -3,8 +3,8 @@ var titleTag = require('../lib/plugins/titleTag')
 var cheerio = require('cheerio');
 
 
-describe('ogTitle', function() {
-this.timeout(100000)
+describe('titleTag', function() {
+
     it('When title tag does not exist then returns null', function(done){
         html = "<html><head></head><body></body></html>"
 
