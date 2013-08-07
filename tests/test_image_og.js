@@ -5,11 +5,11 @@ var cheerio = require('cheerio');
 
 describe('img', function() {
 
-    it('When og:image tag does not exist then returns null', function(done){
+    it('When og:image tag does not exist then returns empty array', function(done){
         html = "<html><head></head><body></body></html>"
         $ = cheerio.load(html)
         image = img($)
-        assert.equal(null, image);
+        assert.equal(0, image.length);
         done()
     })
 
@@ -17,7 +17,8 @@ describe('img', function() {
         html = '<html><head><meta property="og:image" content="https://www.google.com/images/srpr/logo4w.png" /></head><body></body></html>'
         $ = cheerio.load(html)
         image = img($)
-        assert.equal("https://www.google.com/images/srpr/logo4w.png", image);
+        assert.equal(1, image.length);
+        assert.equal("https://www.google.com/images/srpr/logo4w.png", image[0]);
         done()
     })
 });
