@@ -13,6 +13,7 @@ describe('linksnip', function(){
         ls = new linksnip("http://google.com")
         ls.fetch(function(results){
             console.log(results)
+            assert.equal("Google", results.title)
             done()
         })
         // results = linksnip("http://www.google.com", function(results) {
