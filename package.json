@@ -19,7 +19,8 @@
         "async": "~=0.2.5",
         "imagemagick": "~=0.1",
         "jsuri": "~=1.2",
-        "http-get": "~0.5"
+        "http-get": "~=0.5",
+        "string": "~=1.5"
     },
     "devDependencies": {
         "mocha": "~=1.12",
