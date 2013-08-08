@@ -4,9 +4,17 @@ A utility that will take a url and provide a basic synoposis
 of the web page including title, text, and image. Inspired by
 Facebook link scraper.
 
+
 ## Usage
 
-From the command line you can
+Install it:
+
+```bash
+npm install -g linksnip
+```
+
+Run it:
+
 ```bash
 linksnip http://google.com
 ```
@@ -27,3 +35,17 @@ linksnip http://google.com
   ]
 }
 ```
+
+Require it:
+
+```javascript
+linksnip = require('linksnip')
+
+linksnip("https://google.com", function(results){
+    console.log(JSON.stringify(results, null, 2))
+})
+```
+
+
+
+
