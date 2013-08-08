@@ -4,4 +4,6 @@ var url = process.argv[2];
 
 linksnip = require('../')
 
-linksnip(url);
+linksnip(url, function(results){
+    console.log("%j", results)
+});
