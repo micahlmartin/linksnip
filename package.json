@@ -2,7 +2,7 @@
     "name": "linksnip",
     "version": "0.1.0",
     "author": "Micah Martin",
-    "description": "Provides a synopsis for a url",
+    "description": "A utility that will take a url and provide a basic synoposis of the web page including title, text, and image. Inspired by Facebook link scraper.",
     "bin": {
         "linksnip": "./bin/linksnip"
     },
