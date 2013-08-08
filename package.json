@@ -1,6 +1,6 @@
     {
     "name": "linksnip",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "author": "Micah Martin",
     "description": "Provides a synopsis for a url",
     "bin": {
