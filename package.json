@@ -1,6 +1,6 @@
     {
     "name": "linksnip",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "author": "Micah Martin",
     "description": "A utility that will take a url and provide a basic synoposis of the web page including title, text, and image. Inspired by Facebook link scraper.",
     "bin": {
