@@ -10,14 +10,14 @@ describe('linksnip', function(){
 
     it('Google.com test', function(done){
         linksnip("http://google.com", function(results){
-            assert.equal(results.url, "http://www.google.com/")
+            assert.equal(results.url, "https://www.google.com/")
             assert.equal(results.title, "Google")
             assert.equal(results.description, "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.")
             assert.equal(results.images.length, 1)
             assert.equal(results.images[0].height, 128)
             assert.equal(results.images[0].width, 128)
             assert.equal(results.images[0].format, 'PNG')
-            assert.equal(results.images[0].url, 'http://www.google.com/images/google_favicon_128.png')
+            assert.equal(results.images[0].url, 'https://www.google.com/images/google_favicon_128.png')
             done()
         })
     })
@@ -50,20 +50,6 @@ describe('linksnip', function(){
         })
     })
 
-    it('msnbc article test', function(done){
-        linksnip("http://www.nbcnews.com/technology/space-all-small-cheap-satellites-may-one-day-do-your-6C10488674", function(results){
-            assert.equal(results.url, "http://www.nbcnews.com/technology/space-all-small-cheap-satellites-may-one-day-do-your-6C10488674")
-            assert.equal(results.title, "Space for all: Small, cheap satellites may one day do your bidding - NBC News.com")
-            assert.equal(results.description, "SAN FRANCISCO — Someday, swarms of satellites the size of a tissue box will be snapping pictures, taking environmental readings and broadcasting messages from orbit — but the entities controlling those satellites won't be governments.")
-            assert.equal(results.images.length, 1)
-            assert.equal(results.images[0].height, 241)
-            assert.equal(results.images[0].width, 362)
-            assert.equal(results.images[0].format, 'JPEG')
-            assert.equal(results.images[0].url, 'http://msnbcmedia3.msn.com/j/streams/2013/July/130701/6C8110926-130530-151719-nanosat-1815.blocks_desktop_tease.JPG')
-            done()
-        })
-    })
-
     it('venmo.com test', function(done){
         linksnip("http://venmo.com/micahlmartin", function(results){
             assert.equal(results.url, "https://venmo.com/micahlmartin")
@@ -78,6 +64,20 @@ describe('linksnip', function(){
             assert.equal(results.images[1].width, 100)
             assert.equal(results.images[1].format, 'GIF')
             assert.equal(results.images[1].url, 'https://s3.amazonaws.com/venmo/venmo100x100.jpg')
+            done()
+        })
+    })
+
+    it('NYTimes.com test', function(done){
+        linksnip("http://www.nytimes.com/2011/07/19/science/19google.html", function(results){
+            assert.equal(results.url, "http://www.nytimes.com/2011/07/19/science/19google.html?_r=0")
+            assert.equal(results.title, "American Girls Sweep Google’s First Science Fair")
+            assert.equal(results.description, "A 17-year-old from Fort Worth won the $50,000 grand prize at Google’s science fair last week.")
+            assert.equal(results.images.length, 1)
+            assert.equal(results.images[0].height, 75)
+            assert.equal(results.images[0].width, 75)
+            assert.equal(results.images[0].format, 'JPEG')
+            assert.equal(results.images[0].url, 'http://graphics8.nytimes.com/images/2011/07/19/science/19goog/19goog-thumbStandard.jpg')
             done()
         })
     })
