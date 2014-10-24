@@ -1,3 +1,5 @@
+"use strict";
+
 var assert  = require('assert')
 var img = require('../lib/plugins/image_meta_xlarge')
 var cheerio = require('cheerio');

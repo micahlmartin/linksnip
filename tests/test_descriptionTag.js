@@ -1,3 +1,5 @@
+"use strict";
+
 var assert  = require('assert')
 var descriptionTag = require('../lib/plugins/descriptionTag')
 var cheerio = require('cheerio');
@@ -9,7 +11,7 @@ describe('descriptionTag', function() {
         var html = "<html><head></head><body></body></html>"
 
         var $ = cheerio.load(html)
-        description = descriptionTag($)
+        var description = descriptionTag($)
         assert.equal(null, description);
         done()
     })
@@ -18,7 +20,7 @@ describe('descriptionTag', function() {
         var html = '<html><head><title></title></head><body><p class="test"><span></span></p><p>this is my description</p><p>another tag</p></body></html>'
 
         var $ = cheerio.load(html)
-        description = descriptionTag($)
+        var description = descriptionTag($)
         assert.equal("this is my description", description);
         done()
     })

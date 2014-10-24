@@ -1,3 +1,5 @@
+"use strict";
+
 var assert = require("assert")
 var linksnip = require('../lib/linksnip')
 var request = require('request')

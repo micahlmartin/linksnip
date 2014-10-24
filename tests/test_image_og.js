@@ -1,3 +1,5 @@
+"use strict";
+
 var assert  = require('assert')
 var img = require('../lib/plugins/image_og')
 var cheerio = require('cheerio');

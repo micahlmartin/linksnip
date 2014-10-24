@@ -1,3 +1,5 @@
+"use strict";
+
 var assert  = require('assert')
 var titleTag = require('../lib/plugins/titleTag')
 var cheerio = require('cheerio');
