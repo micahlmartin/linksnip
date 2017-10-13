@@ -2,7 +2,7 @@
 
 var url = process.argv[2];
 
-linksnip = require('../')
+var linksnip = require('../')
 
 linksnip(url, function(results){
     console.log(JSON.stringify(results, null, 2))
