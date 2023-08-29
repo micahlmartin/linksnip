@@ -19,7 +19,7 @@
         "imagemagick": "~=0.1",
         "jsuri": "~=1.2",
         "http-get": "~=0.5",
-        "string": "~=1.5"
+        "string": "~1.9.1"
     },
     "devDependencies": {
         "mocha": "~=1.12",
