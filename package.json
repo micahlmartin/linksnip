@@ -14,7 +14,7 @@
     "dependencies": {
         "cheerio": "~=0.12",
         "request": "~=2.25",
-        "underscore": "~=1.5",
+        "underscore": "~1.13.6",
         "async": "~=0.2.5",
         "imagemagick": "~=0.1",
         "jsuri": "~=1.2",
